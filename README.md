@@ -24,3 +24,20 @@
 - ** Back-end**
    - Ainda não implementado - planejado para versões futuras.
 
+## ⚡ Quick Start
+
+    # Clonar o repositório
+
+    git clone https://github.com/LucasLopes12/donjuanmobbileapp
+
+    # Acessar o projeto
+
+    cd donjuanmobileapp
+
+    # Instalar as dependências 
+
+    npm install
+
+    # Iniciar o servidor Expo
+
+    npx expo start
