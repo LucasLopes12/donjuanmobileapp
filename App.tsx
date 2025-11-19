@@ -61,8 +61,14 @@ const ClientZone = ({
   );
 };
 
-const starRatingsCreator = (ratings: number) => {
-
+const starRatingsCreator = ({
+  ratings=0.4,
+}: {
+  ratings: Number,
+}) => {
+  return (
+    <View></View>
+  );
 }
 
 export default function App() {

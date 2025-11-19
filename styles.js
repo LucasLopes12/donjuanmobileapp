@@ -5,7 +5,6 @@ const styles = StyleSheet.create({
     fontFamily: 'Arial',
   },
   container: {
-    flex: 1,
     backgroundColor: '#101010',
     alignItems: 'center',
     alignContent: 'center'
