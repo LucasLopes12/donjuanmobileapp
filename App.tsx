@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { Text, View, Image, Button } from 'react-native';
+import { Text, View, Image, Button, ScrollView } from 'react-native';
 import styles from './styles';
 
 const imagesLogos = {
@@ -48,7 +48,6 @@ const ClientZone = ({
 
 ) => {
   return (
-
         <View style={styles.contentImages}>
           <View style={styles.contentImagesProducts}>
             <Image source={imagesLogos[image]} style={styles.contentImagesImage}/>
@@ -68,11 +67,13 @@ const starRatingsCreator = (ratings: number) => {
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Header></Header>
-      <ContentClient name='Melhores avaliados'>
-        <ClientZone name='Barbearia do Zé' ratings={4.5} price={3.5} image={'donjuan'} />
-      </ContentClient>
-    </View>
+    <ScrollView>
+      <View style={styles.container}>
+        <Header></Header>
+        <ContentClient name='Melhores avaliados'>
+          <ClientZone name='Barbearia do Zé' ratings={4.5} price={3.5} image={'donjuan'} />
+        </ContentClient>
+      </View>
+    </ScrollView>
   );
 };
