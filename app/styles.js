@@ -109,7 +109,29 @@ const styles = StyleSheet.create({
     color: '#d4d4d8',
     fontWeight: '200',
 
-  }
+  },
+  starRatings: {
+    height: 17,
+    width: 10,
+  },
+  starRatingsReversed: {
+    height: 17,
+    width: 10,
+    transform: [{ scaleX: -1 }],
+  },
+  starRatingsDiv: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
+  },
+  moneyPricingsDiv: {
+    display: 'flex',
+    flexDirection: 'row',
+  },
+  moneyPricings: {
+    height: 20,
+    width: 10,
+  },
 });
 
 export default styles;
