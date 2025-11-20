@@ -21,6 +21,7 @@
    - Expo
    - TypeScript
    - Stylesheet
+
 - ** Back-end**
    - Ainda não implementado - planejado para versões futuras.
 
