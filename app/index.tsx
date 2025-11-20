@@ -1,4 +1,4 @@
-import { Text, View, Image, Button, FlatList, ScrollView } from 'react-native';
+import { Text, View, Image, Button, ScrollView } from 'react-native';
 import styles from './styles';
 
 const MoneyPricingCreator = ({
@@ -13,14 +13,14 @@ const MoneyPricingCreator = ({
       pricing.push(<Image key={i} source={require('../assets/icon_firsthalfmoney.png')} style={styles.moneyPricings}></Image>)
     } else {
       pricing.push(<Image key={i} source={require('../assets/icon_secondhalfmoney.png')} style={styles.moneyPricings}></Image>)
-    }
-    return (
-      <View style={styles.moneyPricingsDiv}>
-        {pricing}
-      </View>
-    )
-  }
-}
+    };
+  };
+  return (
+    <View style={styles.moneyPricingsDiv}>
+      {pricing}
+    </View>
+  );
+};
 
 const StarRatingsCreator = ({
   ratings=0.0,
@@ -41,8 +41,8 @@ const StarRatingsCreator = ({
     <View style={styles.starRatingsDiv}>
       {stars}
     </View>
-  )
-}
+  );
+};
 const imagesLogos = {
   donjuan: require('../assets/icon_donjuan.png'),
 } as const;
@@ -63,8 +63,8 @@ const Header = () => {
       <Text style={styles.textHeader}>Contato</Text>
       <Text style={styles.textHeader}>Sobre</Text>
     </View>
-  )
-}
+  );
+};
 
 const Dashboard = ({
   image='desconto'
@@ -75,8 +75,8 @@ const Dashboard = ({
     <View style={styles.dashboard}>
       <Image style={styles.dashboardImage} source={imagesAds[image]}></Image>
     </View>
-  )
-}
+  );
+};
 
 const ContentClient = (
   {name='Melhores ...', children='...'}:

@@ -111,12 +111,12 @@ const styles = StyleSheet.create({
 
   },
   starRatings: {
-    height: 17,
-    width: 10,
+    height: 15,
+    width: 8.5,
   },
   starRatingsReversed: {
-    height: 17,
-    width: 10,
+    height: 15,
+    width: 8.5,
     transform: [{ scaleX: -1 }],
   },
   starRatingsDiv: {
@@ -125,12 +125,14 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
   },
   moneyPricingsDiv: {
+    marginTop: 5,
     display: 'flex',
     flexDirection: 'row',
+    justifyContent: 'flex-start',
   },
   moneyPricings: {
-    height: 20,
-    width: 10,
+    height: 17,
+    width: 8.5,
   },
 });
 
