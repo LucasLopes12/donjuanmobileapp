@@ -1,12 +1,16 @@
-import { StatusBar } from 'expo-status-bar';
-import { Text, View, Image, Button } from 'react-native';
+import { Text, View, Image, Button, FlatList, ScrollView } from 'react-native';
 import styles from './styles';
 
 const imagesLogos = {
   donjuan: require('./assets/icon_donjuan.png'),
 } as const;
 
+const imagesAds = {
+  desconto: require('./assets/CRIANÇA COM DESCONTO.png')
+} as const;
+
 type LogoName = keyof typeof imagesLogos;
+type AdName = keyof typeof imagesAds;
 
 const Header = () => {
   return (
@@ -16,6 +20,18 @@ const Header = () => {
       <Image source={imagesLogos.donjuan} style={styles.imageHeader}/>
       <Text style={styles.textHeader}>Contato</Text>
       <Text style={styles.textHeader}>Sobre</Text>
+    </View>
+  )
+}
+
+const Dashboard = ({
+  image='desconto'
+}: {
+  image: AdName
+}) => {
+  return (
+    <View style={styles.dashboard}>
+      <Image style={styles.dashboardImage} source={imagesAds[image]}></Image>
     </View>
   )
 }
@@ -30,6 +46,7 @@ const ContentClient = (
         <Text style={styles.contentText}>{name}</Text>
         {children}
       </View>
+      <View style={styles.contentLine}></View>
     </View>
   );
 };
@@ -68,11 +85,19 @@ const starRatingsCreator = (ratings: number) => {
 
 export default function App() {
   return (
-    <View style={styles.container}>
+    <View>
       <Header></Header>
-      <ContentClient name='Melhores avaliados'>
-        <ClientZone name='Barbearia do Zé' ratings={4.5} price={3.5} image={'donjuan'} />
-      </ContentClient>
+      <ScrollView>
+        <View style={styles.container}>
+        <Dashboard image='desconto'></Dashboard>
+        <ContentClient name='Melhores avaliados'>
+          <ClientZone name='Barbearia do Zé' ratings={4.5} price={3.5} image={'donjuan'} />
+        </ContentClient>
+        <ContentClient name='Menor custo'>
+          <ClientZone name='Irmãos Barbers' ratings={4.5} price={2.0} image={'donjuan'} />
+        </ContentClient>
+        </View>
+      </ScrollView>
     </View>
   );
 };

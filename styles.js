@@ -5,7 +5,6 @@ const styles = StyleSheet.create({
     fontFamily: 'Arial',
   },
   container: {
-    flex: 1,
     backgroundColor: '#101010',
     alignItems: 'center',
     alignContent: 'center'
@@ -13,14 +12,24 @@ const styles = StyleSheet.create({
   header: {
     display: 'flex',
     alignItems: 'center',
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    zIndex: 10,
     flexDirection: 'row',
     justifyContent: 'space-between',
     width: '100%',
+    backgroundColor: '#101010',
+    borderRadius: 5,
     marginTop: 40,
     paddingLeft: 20,
     paddingRight: 20,
+    paddingBottom: 10,
+    paddingTop: 15,
   },
   textHeader: {
+    display: 'flex',
     fontSize: 12,
     color: '#d4d4d8',
   },
@@ -28,12 +37,24 @@ const styles = StyleSheet.create({
     width: 40,
     height: 40,
   },
+  dashboard: {
+    paddingTop: 70,
+    marginTop: 45,
+    height: 270,
+    borderRadius: 15,
+    width: '85%',
+  },
+  dashboardImage: {
+    width: '100%',
+    height: '100%',
+    borderRadius: 15,
+  },
   contentSessions: {
     display: 'flex',
-    flexDirection: 'row',
+    flexDirection: 'column',
     justifyContent: 'flex-start',
     width: '90%',
-    marginTop: 300,
+    marginTop: 60,
   },
   contentRatings: {
     display: 'flex',
@@ -46,6 +67,13 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: '100',
     color: '#d4d4d8',
+  },
+  contentLine: {
+    marginTop: 15,
+    marginLeft: 14,
+    width: '90%',
+    height: 1,
+    backgroundColor: '#bbc5caff',
   },
   contentImages: {
     display: 'flex',
