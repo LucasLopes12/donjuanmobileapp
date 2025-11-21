@@ -1,5 +1,30 @@
 import { Text, View, Image, Button, ScrollView } from 'react-native';
+import AppIntroSlider from 'react-native-app-intro-slider';
 import styles from './styles';
+
+const renderSlides = ({ item }: any) => {
+  return (
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Image
+        source={item.image}
+        style={{ width: '90%', height: 250, resizeMode: 'cover' }}
+      />
+    </View>
+  );
+};
+
+const slides = [
+  {
+    id: '1',
+    title: 'Criança com desconto',
+    image: require('../assets/CRIANÇA COM DESCONTO.png')
+  },
+  {
+    id: '2',
+    title: 'Relaxamento',
+    image: require('../assets/RELAXAMENTO.png')
+  },
+];
 
 const MoneyPricingCreator = ({
   price=0.0,
@@ -66,15 +91,18 @@ const Header = () => {
   );
 };
 
-const Dashboard = ({
-  image='desconto'
-}: {
-  image: AdName
-}) => {
+const Dashboard = () => {
   return (
-    <View style={styles.dashboard}>
-      <Image style={styles.dashboardImage} source={imagesAds[image]}></Image>
-    </View>
+    <AppIntroSlider
+      renderItem={renderSlides}
+      data={slides}
+      activeDotStyle={{
+        backgroundColor: '#009CFF',
+        width: 30,
+      }}
+      showDoneButton={false}
+      showNextButton={false}
+    />
   );
 };
 
@@ -110,7 +138,7 @@ const ClientZone = ({
         <View style={styles.contentImages}>
           <View style={styles.contentImagesProducts}>
             <Image source={imagesLogos[image]} style={styles.contentImagesImage}/>
-            <View style={styles.contentImagesText}>
+            <View>
               <Text style={styles.contentImagesProductsTextTitle}>{name}</Text>
               <StarRatingsCreator ratings={ratings}/>
               <MoneyPricingCreator price={price}/>
@@ -121,12 +149,13 @@ const ClientZone = ({
 };
 
 export default function App() {
+
   return (
     <View>
       <Header></Header>
       <ScrollView>
         <View style={styles.container}>
-        <Dashboard image='desconto'></Dashboard>
+        <Dashboard></Dashboard>
         <ContentClient name='Melhores avaliados'>
           <ClientZone name='Barbearia do Zé' ratings={4.5} price={3.5} image={'donjuan'} />
         </ContentClient>

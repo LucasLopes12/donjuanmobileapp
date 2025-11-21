@@ -1,11 +1,14 @@
 import { StyleSheet} from 'react-native';
 
+const blackColor = '#000';
+const grayColor = '#bfbfceff';
+
 const styles = StyleSheet.create({
   body: {
     fontFamily: 'Arial',
   },
   container: {
-    backgroundColor: '#101010',
+    backgroundColor: grayColor,
     alignItems: 'center',
     alignContent: 'center'
   },
@@ -20,7 +23,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     width: '100%',
-    backgroundColor: '#101010',
+    backgroundColor: grayColor,
     borderRadius: 5,
     marginTop: 40,
     paddingLeft: 20,
@@ -31,11 +34,13 @@ const styles = StyleSheet.create({
   textHeader: {
     display: 'flex',
     fontSize: 12,
-    color: '#d4d4d8',
+    color: blackColor,
   },
   imageHeader: {
     width: 40,
     height: 40,
+    backgroundColor: blackColor,
+    borderRadius: 20,
   },
   dashboard: {
     paddingTop: 70,
@@ -54,7 +59,7 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     justifyContent: 'flex-start',
     width: '90%',
-    marginTop: 60,
+    marginTop: 42,
   },
   contentRatings: {
     display: 'flex',
@@ -66,14 +71,14 @@ const styles = StyleSheet.create({
   contentText: {
     fontSize: 20,
     fontWeight: '100',
-    color: '#d4d4d8',
+    color: blackColor,
   },
   contentLine: {
     marginTop: 15,
     marginLeft: 14,
     width: '90%',
     height: 1,
-    backgroundColor: '#bbc5caff',
+    backgroundColor: blackColor,
   },
   contentImages: {
     display: 'flex',
@@ -87,7 +92,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     width: 270,
     height: 145,
-    backgroundColor: '#1e3a8a',
+    backgroundColor: '#1c2336ff',
     borderRadius: 10,
     paddingTop: 7
   },
@@ -95,18 +100,16 @@ const styles = StyleSheet.create({
     width: 130,
     height: 130,
   },
-  contentImagesText: {
-  },
   contentImagesProductsTextTitle: {
     fontSize: 18,
-    color: '#d4d4d8',
+    color: grayColor,
     marginTop: 5,
     fontWeight: '400',
-    marginBottom: 20
+    marginBottom: 6,
   },
   contentImagesProductsText: {
     fontSize: 16,
-    color: '#d4d4d8',
+    color: blackColor,
     fontWeight: '200',
 
   },
@@ -134,6 +137,14 @@ const styles = StyleSheet.create({
     height: 17,
     width: 8.5,
   },
+  slide: {
+
+  },
+  slideImage: {
+    width: '100%',
+    height: 200,
+    resizeMode: 'cover',  
+  }
 });
 
 export default styles;
