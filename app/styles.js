@@ -1,105 +1,93 @@
-import { StyleSheet} from 'react-native';
+import { StyleSheet } from 'react-native';
 
 const blackColor = '#000';
 const grayColor = '#bfbfceff';
 
 const styles = StyleSheet.create({
-  body: {
-    fontFamily: 'Arial',
-  },
   container: {
     backgroundColor: grayColor,
     alignItems: 'center',
-    alignContent: 'center'
   },
+
   header: {
-    display: 'flex',
+    flexDirection: 'row',
     alignItems: 'center',
+    justifyContent: 'space-between',
+
     position: 'absolute',
-    top: 0,
+    top: 40,
     left: 0,
     right: 0,
     zIndex: 10,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
+
     width: '100%',
     backgroundColor: grayColor,
     borderRadius: 5,
-    marginTop: 40,
-    paddingLeft: 20,
-    paddingRight: 20,
-    paddingBottom: 10,
-    paddingTop: 15,
+    paddingHorizontal: 20,
+    paddingVertical: 15,
   },
+
   textHeader: {
-    display: 'flex',
     fontSize: 12,
     color: blackColor,
   },
+
   imageHeader: {
     width: 40,
     height: 40,
     backgroundColor: blackColor,
     borderRadius: 20,
   },
-  dashboard: {
-    paddingTop: 70,
-    marginTop: 45,
-    height: 270,
-    borderRadius: 15,
-    width: '85%',
-  },
-  dashboardImage: {
-    width: '100%',
-    height: '100%',
-    borderRadius: 15,
-  },
+
+  /* --- CONTEÚDO --- */
+
   contentSessions: {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'flex-start',
     width: '90%',
     marginTop: 42,
   },
+
   contentRatings: {
-    display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'flex-start',
     width: '100%',
-    height: 200,
   },
+
   contentText: {
     fontSize: 20,
-    fontWeight: '100',
+    fontWeight: '400',
     color: blackColor,
   },
+
   contentLine: {
     marginTop: 15,
-    marginLeft: 14,
     width: '90%',
     height: 1,
     backgroundColor: blackColor,
+    alignSelf: 'center',
   },
+
+  /* --- BLOCOS DE CLIENTES --- */
+
   contentImages: {
-    display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
     width: '90%',
-    paddingTop: 20
+    paddingTop: 20,
   },
+
   contentImagesProducts: {
-    display: 'flex',
     flexDirection: 'row',
     width: 270,
     height: 145,
     backgroundColor: '#1c2336ff',
     borderRadius: 10,
-    paddingTop: 7
+    paddingTop: 7,
   },
-    contentImagesImage: {
+
+  contentImagesImage: {
     width: 130,
     height: 130,
   },
+
   contentImagesProductsTextTitle: {
     fontSize: 18,
     color: grayColor,
@@ -107,44 +95,74 @@ const styles = StyleSheet.create({
     fontWeight: '400',
     marginBottom: 6,
   },
-  contentImagesProductsText: {
-    fontSize: 16,
-    color: blackColor,
-    fontWeight: '200',
 
-  },
+  /* --- RATINGS --- */
+
   starRatings: {
     height: 15,
     width: 8.5,
   },
+
   starRatingsReversed: {
     height: 15,
     width: 8.5,
     transform: [{ scaleX: -1 }],
   },
+
   starRatingsDiv: {
-    display: 'flex',
     flexDirection: 'row',
-    justifyContent: 'flex-start',
   },
+
   moneyPricingsDiv: {
     marginTop: 5,
-    display: 'flex',
     flexDirection: 'row',
-    justifyContent: 'flex-start',
   },
+
   moneyPricings: {
     height: 17,
     width: 8.5,
   },
-  slide: {
 
-  },
+  /* --- CARROSSEL --- */
+
   slideImage: {
-    width: '100%',
-    height: 200,
-    resizeMode: 'cover',  
-  }
+    width: 250,
+    height: 160,
+    borderRadius: 12,
+    resizeMode: 'cover',
+  },
+  slide: {
+  width: 300,
+  height: 180,
+  borderRadius: 10,
+  marginRight: 12,
+  overflow: 'hidden',
+  backgroundColor: '#ccc',
+  alignItems: 'center',
+  justifyContent: 'center',
+},
+slideImage: {
+  width: '100%',
+  height: '100%',
+  resizeMode: 'cover',
+},
+slideTitle: {
+  position: 'absolute',
+  bottom: 10,
+  color: 'white',
+  backgroundColor: 'rgba(0,0,0,0.4)',
+  paddingHorizontal: 10,
+  paddingVertical: 5,
+  borderRadius: 5,
+},
+carouselContainer: {
+  marginTop: 140,
+  width: '100%',
+  height: 200,
+  alignItems: 'center',
+  justifyContent: 'center',
+},
+
 });
 
 export default styles;
