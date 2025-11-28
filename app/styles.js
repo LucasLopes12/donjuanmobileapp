@@ -13,18 +13,17 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-
     position: 'absolute',
-    top: 40,
+    top: 10,
     left: 0,
     right: 0,
     zIndex: 10,
-
     width: '100%',
     backgroundColor: grayColor,
-    borderRadius: 5,
     paddingHorizontal: 20,
-    paddingVertical: 15,
+    paddingVertical: 20,
+    paddingTop: 30,
+    borderRadius: 5
   },
 
   textHeader: {
@@ -38,8 +37,6 @@ const styles = StyleSheet.create({
     backgroundColor: blackColor,
     borderRadius: 20,
   },
-
-  /* --- CONTEÚDO --- */
 
   contentSessions: {
     width: '90%',
@@ -65,14 +62,13 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
   },
 
-  /* --- BLOCOS DE CLIENTES --- */
-
   contentImages: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
-    width: '90%',
+    width: 300,
     paddingTop: 20,
+    marginRight: -12
   },
+
 
   contentImagesProducts: {
     flexDirection: 'row',
@@ -95,8 +91,6 @@ const styles = StyleSheet.create({
     fontWeight: '400',
     marginBottom: 6,
   },
-
-  /* --- RATINGS --- */
 
   starRatings: {
     height: 15,
@@ -122,8 +116,6 @@ const styles = StyleSheet.create({
     height: 17,
     width: 8.5,
   },
-
-  /* --- CARROSSEL --- */
 
   slideImage: {
     width: 250,
