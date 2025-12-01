@@ -24,91 +24,12 @@ const SliderItem = ({ item }: { item: { id: string; title: string; image: any } 
   );
 };
 
-const Carousel = () => {
-  return (
-    <View style={styles.carouselContainer}>
-      <FlatList
-        data={slides}
-        renderItem={({ item }) => <SliderItem item={item} />}
-        keyExtractor={(item) => item.id}
-        horizontal
-        pagingEnabled
-        showsHorizontalScrollIndicator={false}
-      />
-    </View>
-  );
-};
-
-const MoneyPricingCreator = ({ price = 0.0 }: { price: number }) => {
-  let pricing: React.ReactNode[] = [];
-
-  for (let i = 0.5; i <= price; i += 0.5) {
-    if (i % 1 !== 0) {
-      pricing.push(
-        <Image
-          key={i}
-          source={require('../../assets/icon_firsthalfmoney.png')}
-          style={styles.moneyPricings}
-        />
-      );
-    } else {
-      pricing.push(
-        <Image
-          key={i}
-          source={require('../../assets/icon_secondhalfmoney.png')}
-          style={styles.moneyPricings}
-        />
-      );
-    }
-  }
-
-  return <View style={styles.moneyPricingsDiv}>{pricing}</View>;
-};
-
-const StarRatingsCreator = ({ ratings = 0.0 }: { ratings: number }) => {
-  let stars: React.ReactNode[] = [];
-
-  for (let i = 0.5; i <= ratings; i += 0.5) {
-    if (i % 1 !== 0) {
-      stars.push(
-        <Image
-          key={i}
-          source={require('../../assets/icon_halfstar.png')}
-          style={styles.starRatings}
-        />
-      );
-    } else {
-      stars.push(
-        <Image
-          key={i}
-          source={require('../../assets/icon_halfstar.png')}
-          style={styles.starRatingsReversed}
-        />
-      );
-    }
-  }
-
-  return <View style={styles.starRatingsDiv}>{stars}</View>;
-};
-
 const imagesLogos = {
   donjuan: require('../../assets/icon_donjuan.png'),
 } as const;
 
 type LogoName = keyof typeof imagesLogos;
 
-const Header = () => {
-  return (
-    <View style={styles.header}>
-      <Text style={styles.textHeader}>Procurar</Text>
-      <Text style={styles.textHeader}>Preços</Text>
-      <Image source={imagesLogos.donjuan} style={styles.imageHeader} />
-      <Text style={styles.textHeader}><Link href='contato'></Link></Text>
-      <Text style={styles.textHeader}>Sobre</Text>
-    </View>
-  );
-};
-export { Header };
 
 const ContentClient = ({
   name = 'Melhores ...',
