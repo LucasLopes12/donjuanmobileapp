@@ -6,12 +6,12 @@ const slides = [
   {
     id: '1',
     title: 'Criança com desconto',
-    image: require('../assets/crianca_com_desconto.png'),
+    image: require('../../assets/crianca_com_desconto.png'),
   },
   {
     id: '2',
     title: 'Relaxamento',
-    image: require('../assets/relaxamento.png'),
+    image: require('../../assets/relaxamento.png'),
   },
 ];
 
@@ -46,7 +46,7 @@ const MoneyPricingCreator = ({ price = 0.0 }: { price: number }) => {
       pricing.push(
         <Image
           key={i}
-          source={require('../assets/icon_firsthalfmoney.png')}
+          source={require('../../assets/icon_firsthalfmoney.png')}
           style={styles.moneyPricings}
         />
       );
@@ -54,7 +54,7 @@ const MoneyPricingCreator = ({ price = 0.0 }: { price: number }) => {
       pricing.push(
         <Image
           key={i}
-          source={require('../assets/icon_secondhalfmoney.png')}
+          source={require('../../assets/icon_secondhalfmoney.png')}
           style={styles.moneyPricings}
         />
       );
@@ -72,7 +72,7 @@ const StarRatingsCreator = ({ ratings = 0.0 }: { ratings: number }) => {
       stars.push(
         <Image
           key={i}
-          source={require('../assets/icon_halfstar.png')}
+          source={require('../../assets/icon_halfstar.png')}
           style={styles.starRatings}
         />
       );
@@ -80,7 +80,7 @@ const StarRatingsCreator = ({ ratings = 0.0 }: { ratings: number }) => {
       stars.push(
         <Image
           key={i}
-          source={require('../assets/icon_halfstar.png')}
+          source={require('../../assets/icon_halfstar.png')}
           style={styles.starRatingsReversed}
         />
       );
@@ -91,7 +91,7 @@ const StarRatingsCreator = ({ ratings = 0.0 }: { ratings: number }) => {
 };
 
 const imagesLogos = {
-  donjuan: require('../assets/icon_donjuan.png'),
+  donjuan: require('../../assets/icon_donjuan.png'),
 } as const;
 
 type LogoName = keyof typeof imagesLogos;
@@ -157,11 +157,7 @@ export default function App() {
       <Header />
       <ScrollView>
         <View style={styles.container}>
-
-          {/* --- CARROSSEL PRINCIPAL --- */}
           <Carousel />
-
-          {/* --- MELHORES AVALIADOS (AGORA SLIDER) --- */}
           <ContentClient name="Melhores avaliados">
             <FlatList
               data={[
@@ -182,8 +178,6 @@ export default function App() {
               )}
             />
           </ContentClient>
-
-          {/* --- MENOR CUSTO (AGORA SLIDER) --- */}
           <ContentClient name="Menor custo">
             <FlatList
               data={[
@@ -204,9 +198,8 @@ export default function App() {
               )}
             />
           </ContentClient>
-
         </View>
       </ScrollView>
     </View>
   );
-}
+};
