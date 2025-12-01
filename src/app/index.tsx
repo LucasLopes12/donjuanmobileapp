@@ -1,6 +1,7 @@
 import React from 'react';
 import { FlatList, Text, View, Image, ScrollView } from 'react-native';
 import styles from './styles';
+import { Link } from 'expo-router';
 
 const slides = [
   {
@@ -102,11 +103,12 @@ const Header = () => {
       <Text style={styles.textHeader}>Procurar</Text>
       <Text style={styles.textHeader}>Preços</Text>
       <Image source={imagesLogos.donjuan} style={styles.imageHeader} />
-      <Text style={styles.textHeader}>Contato</Text>
+      <Text style={styles.textHeader}><Link href='contato'></Link></Text>
       <Text style={styles.textHeader}>Sobre</Text>
     </View>
   );
 };
+export { Header };
 
 const ContentClient = ({
   name = 'Melhores ...',
