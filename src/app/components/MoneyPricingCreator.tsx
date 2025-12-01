@@ -11,7 +11,7 @@ const MoneyPricingCreator = ({ price = 0.0 }: { price: number }) => {
       pricing.push(
         <Image
           key={i}
-          source={require('../../assets/icon_firsthalfmoney.png')}
+          source={require('../../../assets/icon_firsthalfmoney.png')}
           style={styles.moneyPricings}
         />
       );
@@ -19,7 +19,7 @@ const MoneyPricingCreator = ({ price = 0.0 }: { price: number }) => {
       pricing.push(
         <Image
           key={i}
-          source={require('../../assets/icon_secondhalfmoney.png')}
+          source={require('../../../assets/icon_secondhalfmoney.png')}
           style={styles.moneyPricings}
         />
       );

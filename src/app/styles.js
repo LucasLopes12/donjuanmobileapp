@@ -156,6 +156,22 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  titleContato: {
+    fontWeight: 'bold',
+  },
+  devsPicsContato: {
+    borderRadius: 75,
+    width: 150,
+    height: 150,
+    backgroundColor: blackColor
+  },
+  space: {
+    marginTop: 100
+  },
+  devsContato: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  }
 
 });
 

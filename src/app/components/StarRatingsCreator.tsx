@@ -9,7 +9,7 @@ const StarRatingsCreator = ({ ratings = 0.0 }: { ratings: number }) => {
       stars.push(
         <Image
           key={i}
-          source={require('../../assets/icon_halfstar.png')}
+          source={require('../../../assets/icon_halfstar.png')}
           style={styles.starRatings}
         />
       );
@@ -17,7 +17,7 @@ const StarRatingsCreator = ({ ratings = 0.0 }: { ratings: number }) => {
       stars.push(
         <Image
           key={i}
-          source={require('../../assets/icon_halfstar.png')}
+          source={require('../../../assets/icon_halfstar.png')}
           style={styles.starRatingsReversed}
         />
       );

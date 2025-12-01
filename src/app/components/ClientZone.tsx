@@ -4,7 +4,7 @@ import StarRatingsCreator from './StarRatingsCreator';
 import MoneyPricingCreator from './MoneyPricingCreator';
 
 const imagesLogos = {
-  donjuan: require('../../assets/icon_donjuan.png'),
+  donjuan: require('../../../assets/icon_donjuan.png'),
 } as const;
 
 type LogoName = keyof typeof imagesLogos;
