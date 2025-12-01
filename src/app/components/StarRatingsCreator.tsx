@@ -26,3 +26,5 @@ const StarRatingsCreator = ({ ratings = 0.0 }: { ratings: number }) => {
 
   return <View style={styles.starRatingsDiv}>{stars}</View>;
 };
+
+export default StarRatingsCreator;

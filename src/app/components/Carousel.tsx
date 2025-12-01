@@ -1,5 +1,19 @@
 import { View, Text, FlatList, Image } from 'react-native';
 import styles from '../styles.js';
+import SliderItem from './SliderItem';
+
+const slides = [
+  {
+    id: '1',
+    title: 'Criança com desconto',
+    image: require('../../assets/crianca_com_desconto.png'),
+  },
+  {
+    id: '2',
+    title: 'Relaxamento',
+    image: require('../../assets/relaxamento.png'),
+  },
+];
 
 const Carousel = () => {
   return (
@@ -16,4 +30,4 @@ const Carousel = () => {
   );
 };
 
-export default { Carousel };
+export default Carousel;
