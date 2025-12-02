@@ -166,35 +166,38 @@ const styles = StyleSheet.create({
     marginLeft: '5%',
   },
   devsPicsContato: {
-    borderRadius: 75,
-    width: 150,
-    height: 150,
+    borderRadius: 90,
+    width: 180,
+    height: 180,
     backgroundColor: blackColor
   },
   space: {
     marginTop: 100
   },
   devsContato: {
+    marginBottom: 100,
     marginLeft: '5%',
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'flex-start',
   },
   devsContatoName: {
+    marginBottom: 14,
     fontSize: 22,
-    marginRight: 50,
-    fontWeight: '400',
+    fontWeight: 'bold',
   },
   devsContatoInfo: {
-    width: 180,
+    width: 155,
   },
   devsPicsSocialMedia: {
     width: 17,
     height: 17,
+    marginRight: 4
   },
   devsContatoSessions: {
     display: 'flex',
-    flexDirection: 'row'
+    flexDirection: 'row',
+    marginBottom: 5
   }
 
 });

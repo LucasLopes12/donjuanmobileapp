@@ -13,12 +13,37 @@ export default function App() {
                     <View style={styles.space}></View>
                     <View>
                         <Text style={styles.titleContato}>Contate-nos através de nossas mídias sociais.</Text>
+
                         <DevsContato 
                         nome='Lucas Lopes'
+                        image='lucaslopes'
                         whatsapp='(19) 98451-9925'
                         instagram='@luucxzl'
                         github='@LucasLopes12'
                         linkedin='Lucas Lopes'
+                        />
+                        <DevsContato 
+                        nome='Lucas de Anddrade'
+                        image='lucasdeanddrade'
+                        whatsapp='(19) 99236-6858'
+                        instagram='@l.anddrade'
+                        github='@Landdradee'
+                        linkedin='X'
+                        />
+                        <DevsContato 
+                        nome='Nicolas Bonfim'
+                        image='nicolasbonfim'
+                        whatsapp='(11) 96662-1559'
+                        instagram='@moratozl'
+                        github='@moratozk'
+                        linkedin='Nicolas B. Morato'
+                        /><DevsContato 
+                        nome='Gabriel Cardoso'
+                        image='gabrielcardoso'
+                        whatsapp='(19) 99359-0499'
+                        instagram='@gabcardoso08'
+                        github='@gabrielcangelino'
+                        linkedin='X'
                         />
                     </View>
                 </View>

@@ -2,14 +2,27 @@ import React from 'react';
 import { Text, View, Image } from 'react-native';
 import styles from '../styles';
 
+const imagesLogos = {
+  donjuan: require('../../../assets/icon_donjuan.png'),
+  lucaslopes: require('../../../assets/icon-lucaslopes.jpeg'),
+  lucasdeanddrade: require('../../../assets/icon-lucasdeanddrade.jpeg'),
+  nicolasbonfim: require('../../../assets/icon-nicolasbonfim.jpeg'),
+  gabrielcardoso: require('../../../assets/icon-gabrielcardoso.jpg'),
+  otavioprata: require('../../../assets/icon-otavioprata.jpg'),
+} as const;
+
+type LogoName = keyof typeof imagesLogos;
+
 const DevsContato = ({
     nome='Don Juan User',
+    image='donjuan',
     whatsapp='19999999999',
     instagram='@donjuanuser',
     github='@donjuanuser',
     linkedin='@donjuanuser'
 }: {
     nome: string;
+    image: LogoName;
     whatsapp: string;
     instagram: string;
     github: string;
@@ -36,7 +49,7 @@ const DevsContato = ({
                     <Text>{linkedin}</Text>
                 </View>
             </View>
-            <Image source={require('../../../assets/icon_donjuan.png')} style={styles.devsPicsContato} />
+            <Image source={imagesLogos[image]} style={styles.devsPicsContato} />
         </View>
     );
 };
