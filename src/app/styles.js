@@ -28,6 +28,7 @@ const styles = StyleSheet.create({
 
   textHeader: {
     fontSize: 12,
+    fontWeight: '400',
     color: blackColor,
   },
 
@@ -157,7 +158,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   titleContato: {
-    fontWeight: 'bold',
+    fontWeight: '400',
+    marginBottom: 80,
+    fontSize: 20,
+    fontFamily: 'monospace',
+    margin: 10,
+    marginLeft: '5%',
   },
   devsPicsContato: {
     borderRadius: 75,
@@ -169,8 +175,26 @@ const styles = StyleSheet.create({
     marginTop: 100
   },
   devsContato: {
+    marginLeft: '5%',
+    display: 'flex',
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: 'flex-start',
+  },
+  devsContatoName: {
+    fontSize: 22,
+    marginRight: 50,
+    fontWeight: '400',
+  },
+  devsContatoInfo: {
+    width: 180,
+  },
+  devsPicsSocialMedia: {
+    width: 17,
+    height: 17,
+  },
+  devsContatoSessions: {
+    display: 'flex',
+    flexDirection: 'row'
   }
 
 });
