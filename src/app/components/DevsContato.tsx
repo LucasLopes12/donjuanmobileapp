@@ -1,6 +1,7 @@
 import React from 'react';
-import { Text, View, Image } from 'react-native';
+import { Text, View, Image, StyleSheet } from 'react-native';
 import styles from '../styles';
+
 
 const imagesLogos = {
   donjuan: require('../../../assets/icon_donjuan.png'),
@@ -14,6 +15,7 @@ const imagesLogos = {
 type LogoName = keyof typeof imagesLogos;
 
 const DevsContato = ({
+    id=0,
     nome='Don Juan User',
     image='donjuan',
     whatsapp='19999999999',
@@ -21,6 +23,7 @@ const DevsContato = ({
     github='@donjuanuser',
     linkedin='@donjuanuser'
 }: {
+    id: number;
     nome: string;
     image: LogoName;
     whatsapp: string;
@@ -28,8 +31,33 @@ const DevsContato = ({
     github: string;
     linkedin: string;
 }) => {
-    return(
-        <View style={styles.devsContato}>
+
+    let styleBody;
+
+    if (id % 2 == 0) {
+        styleBody = StyleSheet.create({
+            devsContato: {
+                flexDirection: 'row',
+                marginBottom: 100,
+                marginLeft: '5%',
+                display: 'flex',
+                justifyContent: 'flex-start',
+            }
+        });
+    } else {
+        styleBody = StyleSheet.create({
+            devsContato: {
+                flexDirection: 'row-reverse',
+                marginBottom: 100,
+                marginLeft: '5%',
+                display: 'flex',
+                justifyContent: 'flex-end',
+            }
+        });
+    }
+
+    const body = (
+        <View style={styleBody.devsContato}>
             <View style={styles.devsContatoInfo}>
                 <Text style={styles.devsContatoName}>{nome}</Text>
                 <View style={styles.devsContatoSessions}>
@@ -52,6 +80,8 @@ const DevsContato = ({
             <Image source={imagesLogos[image]} style={styles.devsPicsContato} />
         </View>
     );
+
+    return body;
 };
 
 export default DevsContato;

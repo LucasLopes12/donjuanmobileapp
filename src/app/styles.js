@@ -174,13 +174,6 @@ const styles = StyleSheet.create({
   space: {
     marginTop: 100
   },
-  devsContato: {
-    marginBottom: 100,
-    marginLeft: '5%',
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'flex-start',
-  },
   devsContatoName: {
     marginBottom: 14,
     fontSize: 22,

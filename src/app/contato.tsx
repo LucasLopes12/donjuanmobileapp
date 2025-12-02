@@ -15,6 +15,7 @@ export default function App() {
                         <Text style={styles.titleContato}>Contate-nos através de nossas mídias sociais.</Text>
 
                         <DevsContato 
+                        id={0}
                         nome='Lucas Lopes'
                         image='lucaslopes'
                         whatsapp='(19) 98451-9925'
@@ -23,6 +24,7 @@ export default function App() {
                         linkedin='Lucas Lopes'
                         />
                         <DevsContato 
+                        id={1}
                         nome='Lucas de Anddrade'
                         image='lucasdeanddrade'
                         whatsapp='(19) 99236-6858'
@@ -30,14 +32,17 @@ export default function App() {
                         github='@Landdradee'
                         linkedin='X'
                         />
-                        <DevsContato 
+                        <DevsContato
+                        id={2} 
                         nome='Nicolas Bonfim'
                         image='nicolasbonfim'
                         whatsapp='(11) 96662-1559'
                         instagram='@moratozl'
                         github='@moratozk'
                         linkedin='Nicolas B. Morato'
-                        /><DevsContato 
+                        />
+                        <DevsContato
+                        id={3} 
                         nome='Gabriel Cardoso'
                         image='gabrielcardoso'
                         whatsapp='(19) 99359-0499'
