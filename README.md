@@ -29,7 +29,7 @@
 
     # Clonar o repositório
 
-    git clone https://github.com/LucasLopes12/donjuanmobbileapp
+    git clone https://github.com/LucasLopes12/donjuanmobileapp
 
     # Acessar o projeto
 
